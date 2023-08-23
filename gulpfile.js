@@ -13,13 +13,13 @@ const rename        = require('gulp-rename');
 
 function browsersync() {
     browserSync.init({
-        server: {
-            baseDir: 'app',
-        }
-        // proxy: "http://localhost:8888",
-        // port: 8888,
-        // open: true,
-        // notify: false
+        // server: {
+        //     baseDir: 'app',
+        // }
+        proxy: "http://localhost:8888",
+        port: 8888,
+        open: true,
+        notify: false
     });
 }
 

@@ -17,6 +17,11 @@
     }
 }
 .content{
+    &__decor{
+        background-image: url(../images/decor.svg);
+        background-repeat: no-repeat;
+        background-position: left center;
+    }
     &__inner{
         display: flex;
         justify-content: space-between;
@@ -43,7 +48,7 @@
         border: 2px solid rgba(252, 71, 84, 0.55);
     }
     &__statistics{
-        margin-top: 75px;
+        margin: 75px 0;
         display: flex;
     }
     &__statistics-item{
@@ -97,6 +102,10 @@
         height: 100%;
         object-fit: cover;
         z-index: 3;
+    }
+    &__boxs-decorcircle{
+        top: 138px;
+        left: -19px;
     }
     &__boxs-data{
         background: linear-gradient(114deg, rgba(255, 254, 254, 0.23) 0%, rgba(255, 254, 254, 0.23) 100%);

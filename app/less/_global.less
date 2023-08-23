@@ -24,6 +24,8 @@ a{
   display: flex;
   flex-direction: column;
   min-height: 100%;
+  position: relative;
+  overflow: hidden;
 }
 .main{
   flex: 1 0 auto;
@@ -111,6 +113,27 @@ a{
     &:hover{
       transform: translateY(-4px);
     }
+  }
+}
+.decor-circle{
+  background: #FC4754;
+  border-radius: 50%;
+  filter: blur(65px);
+  transform: translate3d(0, 0, 0);
+  width: 262px;
+  height: 262px;
+  position: absolute;
+  pointer-events: none;
+  &--1{
+    left: -200px;
+    top: 40px;
+  }
+  &--2{
+    width: 351px;
+    height: 271px;
+    bottom: -270px;
+    left: 50%;
+    transform: translate(-50%);
   }
 }
 
