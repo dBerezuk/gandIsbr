@@ -50,11 +50,11 @@ a{
     transform: scale(0) rotate(0);
     width: 100%;
     height: 100%;
-    transition: transform .3s linear;
+    transition: transform .3s;
   }
   &:hover::before{
     transform: scale(1.6);
-    animation: logo-animate 1.5s infinite;
+    animation: logo-animate 1.5s .3s infinite;
   }
   @keyframes logo-animate {
     0%{
@@ -127,6 +127,7 @@ a{
   &--1{
     left: -200px;
     top: 40px;
+    animation: decor-circle-1 3s infinite;
   }
   &--2{
     width: 351px;
@@ -134,9 +135,34 @@ a{
     bottom: -270px;
     left: 50%;
     transform: translate(-50%);
+    animation: decor-circle-2 3s infinite;
   }
 }
-
+@keyframes decor-circle-1 {
+  0%{
+    width: 262px;
+    height: 262px;
+  }
+  50%{
+    width: 240px;
+    height: 240px;
+  }
+  100%{
+    width: 262px;
+    height: 262px;
+  }
+}
+@keyframes decor-circle-2 {
+  0%{
+    bottom: -270px;
+  }
+  50%{
+    bottom: -250px;
+  }
+  100%{
+    bottom: -270px;
+  }
+}
 
 
 

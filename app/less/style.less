@@ -6,7 +6,7 @@
 
 .header{
     padding-top: 50px;
-    margin-bottom: 75px;
+    margin-bottom: 50px;
     &__inner{
         display: flex;
         align-items: center;
@@ -17,10 +17,24 @@
     }
 }
 .content{
+    padding-top: 25px;
+    & .container{
+        position: relative;
+    }
     &__decor{
         background-image: url(../images/decor.svg);
+        background-size: cover;
         background-repeat: no-repeat;
         background-position: left center;
+        max-height: 430px;
+        height: 100%;
+        max-width: 570px;
+        width: 100%;
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        pointer-events: none;
+        z-index: -1;
     }
     &__inner{
         display: flex;
@@ -53,6 +67,7 @@
     }
     &__statistics-item{
         padding: 0 27px;
+        min-width: 122px;
     }
     &__statistics-item:first-child{
         padding-left: 0;
@@ -77,6 +92,7 @@
     &__boxs-box{
         position: relative;
         max-width: 299px;
+        z-index: 9;
         span{
             position: absolute;
             border: 1px solid rgba(252, 71, 84, 0.50);
@@ -86,14 +102,17 @@
             z-index: 2;
             top: -7px;
             left: 6px;
+            animation: content-img-box-1 4s infinite;
         }
         span:nth-child(2){
             top: -13px;
             left: 12px;
+            animation: content-img-box-2 3s infinite;
         }
         span:nth-child(3){
             top: -20px;
             left: 19px;
+            animation: content-img-box-3 3s infinite;
         }
     }
     &__boxs-image{
@@ -106,6 +125,7 @@
     &__boxs-decorcircle{
         top: 138px;
         left: -19px;
+        animation: decor-circle-1 3s infinite;
     }
     &__boxs-data{
         background: linear-gradient(114deg, rgba(255, 254, 254, 0.23) 0%, rgba(255, 254, 254, 0.23) 100%);
@@ -114,7 +134,7 @@
         position: absolute;
         bottom: 25px;
         right: 117px;
-        z-index: 3;
+        z-index: 10;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -148,5 +168,48 @@
             box-shadow: 0 0 0 3px #FF828B;
             background-color: rgba(252, 71, 84, 0.78);
         }
+    }
+}
+
+@keyframes content-img-box-1 {
+    0%{
+        top: -7px;
+        left: 6px;
+    }
+    50%{
+        top: 14px;
+        left: -14px;
+    }
+    100%{
+        top: -7px;
+        left: 6px;
+    }
+}
+@keyframes content-img-box-2 {
+    0%{
+        top: -13px;
+        left: 12px;
+    }
+    50%{
+        top: -20px;
+        left: 19px;
+    }
+    100%{
+        top: -13px;
+        left: 12px;
+    }
+}
+@keyframes content-img-box-3 {
+    0%{
+        top: -20px;
+        left: 19px;
+    }
+    50%{
+        top: -13px;
+        left: 12px;
+    }
+    100%{
+        top: -20px;
+        left: 19px;
     }
 }
