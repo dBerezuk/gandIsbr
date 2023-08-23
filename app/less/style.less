@@ -1,8 +1,8 @@
-@import '_vars.less';
-@import '_fonts.less';
-@import '_reset.less';
-@import '_libs.less';
-@import '_global.less';
+@import '_vars';
+@import '_fonts';
+@import '_reset';
+@import '_libs';
+@import '_global';
 
 .header{
     padding-top: 50px;
@@ -18,12 +18,13 @@
 }
 .content{
     padding-top: 25px;
+    margin-bottom: 40px;
     & .container{
         position: relative;
     }
     &__decor{
         background-image: url(../images/decor.svg);
-        background-size: cover;
+        background-size: contain;
         background-repeat: no-repeat;
         background-position: left center;
         max-height: 430px;
@@ -92,6 +93,7 @@
     &__boxs-box{
         position: relative;
         max-width: 299px;
+        max-height: 391px;
         z-index: 9;
         span{
             position: absolute;
@@ -156,10 +158,10 @@
         font-weight: 700;
     }
     &__boxs-btn{
-        background-color: rgba(252, 71, 84, 0.98);
+        background-color: @color-bg;
         border: 2px solid #FF828B;
         border-radius: 5px;
-        padding: 13px 20px;
+        padding: 13px 12px;
         font-weight: 700;
         font-size: 18px;
         text-align: center;
@@ -213,3 +215,6 @@
         left: 19px;
     }
 }
+
+
+@import "_media";
