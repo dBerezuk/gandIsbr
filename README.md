@@ -1,3 +1,3 @@
 # gandIsbr
 
-Создан на сборке **gulp** + препроцессор **LESS**
+Created on assembly **gulp** + preprocessor **LESS**

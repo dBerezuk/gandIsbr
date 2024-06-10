@@ -3,8 +3,6 @@ $(document).ready(function(){
         let y = e.pageY / 25;
         let x = e.pageX / 25;
         $(".content__decor").css('transform', 'translate(' + x + 'px,' + y + 'px)');
-
-        // $(".content__boxs-box").css('transform', 'translate(' + x / 2 + 'px,' + y / 2 + 'px)');
     });
 
     $(".content__statistics-num span").each(function(){
